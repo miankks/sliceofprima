@@ -47,6 +47,10 @@
     border: none;
 }
 
+.footer-logo{
+    width: 80px;
+}
+
 @media (max-width:750px) {
     .footer-content{
         display: flex;

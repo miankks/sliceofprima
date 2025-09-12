@@ -5,10 +5,9 @@ const Header = () => {
   return (
     <div className='header'>
         <div className="header-contents">
-            <h2>Order your favourite food here</h2>
-            <p>Choose from the diverse menu featuring a delectable array of dishes crafted with the
-                finest ingredients and culinary expertise. Our mission is to satisfy cravings and elevate your dining
-                experience, one delicious meal at a time.
+            <h2>Välkommen till Slice Of Prima</h2>
+            <p>Vi är så glada att få välkomna dig till Slice Of Prima. 
+              Här får du njuta av god mat lagat med kärlek och glädje.
             </p>
             <button>View Menu</button>
         </div>

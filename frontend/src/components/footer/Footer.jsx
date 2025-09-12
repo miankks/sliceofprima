@@ -7,11 +7,9 @@ const Footer = () => {
     <div className='footer' id='footer'>
         <div className="footer-content">
             <div className="footer-content-left">
-                <img src={assets.logo} alt="logo" />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Ad officia aut dolorum quidem ipsum repellat accusantium commodi ut 
-                    obcaecati ipsa ducimus reiciendis, sunt et voluptatibus vero vitae quae
-                     porro distinctio!
+                <img src={assets.fevicon_icon} alt="logo" className='footer-logo'/>
+                <p>Vi är så glada att få välkomna dig till Slice Of Prima. 
+                    Här får du njuta av god mat lagat med kärlek och glädje.
                 </p>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="" />
@@ -31,8 +29,8 @@ const Footer = () => {
             <div className="footer-content-right">
                 <h2>Get in touch</h2>
                 <ul>
-                    <li>+12345678</li>
-                    <li>contact@sliceofprima.com</li>
+                    <li>076-430 22 71</li>
+                    <li>pickandmove@hotmail.com</li>
                 </ul>
             </div>
         </div>
