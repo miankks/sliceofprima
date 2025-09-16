@@ -43,7 +43,7 @@ const BackToTop = () => {
     }
 
   return (
-    <ButtonContainer isscrollbuttonvisible={showButton} onclick={scrollToTop}>
+    <ButtonContainer isscrollbuttonvisible={showButton} onClick={scrollToTop}>
         <svg
             width={24}
             height={24}
