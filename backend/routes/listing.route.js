@@ -1,11 +1,8 @@
 import express from 'express';
-import Listing from '../models/listing.model.js';
+import { createListing } from '../controllers/listing.controller.js';
 
-export const createListing = async (req, res, next) => {
-    try {
-        const listing = await Listing.create(req.body);
-        return res.status(201).json(listing);
-    } catch (error) {
-        next(error)
-    }
-}
+const router = express.Router();
+
+router.post('/create', createListing)
+
+export default router;
