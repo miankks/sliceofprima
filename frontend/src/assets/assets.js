@@ -128,7 +128,7 @@ export const food_list = [
         category: "Pizza"
     },
     {
-        _id: "5",
+        _id: "6",
         name: "Pizza Capricciosa",
         image: pizza_capricciosa,
         price: 119,
@@ -136,7 +136,7 @@ export const food_list = [
         category: "Pizza"
     },
     {
-        _id: "5",
+        _id: "7",
         name: "Pizza Hawai",
         image: pizza_hawai,
         price: 119,
@@ -144,7 +144,7 @@ export const food_list = [
         category: "Pizza"
     },
     {
-        _id: "5",
+        _id: "8",
         name: "Pizza LA Banana",
         image: pizza_labanana,
         price: 119,
@@ -152,7 +152,7 @@ export const food_list = [
         category: "Pizza"
     },
     {
-        _id: "5",
+        _id: "9",
         name: "Pizza Bussola",
         image: pizza_bussola,
         price: 119,

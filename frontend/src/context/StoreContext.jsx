@@ -11,26 +11,35 @@ const StoreContextProvider = (props) => {
         // if user add item first time in the cart, this statement will be executed, key ID is itemId
         // else if any item is already available and quantity is one, else statement will increase that
         if (!cartItems[itemId]) {
-            setCartItems((prev => ({...prev, [itemId]:1})))
+            setCartItems((prev => ({ ...prev, [itemId]: 1 })))
         } else {
-            setCartItems((prev) => ({...prev, [itemId]:prev[itemId]+1}))
+            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
         }
     }
 
     const removeFromCart = (itemId) => {
-            setCartItems((prev) => ({...prev, [itemId]:prev[itemId]-1}))
+        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
     }
 
-    useEffect(() => {
-        
-    }, [cartItems])
+    const getTotalCartAmount = () => {
+        let totalAMount = 0;
+        for (const item in cartItems) {
+            if (cartItems[item] > 0) {
+                // check if item ID is matching with item, so item is available in cart
+                let itemInfo = food_list.find((product) => product._id === item);
+                totalAMount += itemInfo.price * cartItems[item];
+            }
+        }
+        return totalAMount;
+    }
 
-      const contextValue = {
+    const contextValue = {
         food_list,
         cartItems,
         setCartItems,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        getTotalCartAmount
     }
 
     return (
