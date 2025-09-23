@@ -4,7 +4,9 @@ import header_img from './header_img.png'
 import search_icon from './search_icon.png'
 import menu_1 from './menu_1.png'
 import menu_2 from './menu_2.png'
+import menu_3 from './menu_3.png'
 import menu_4 from './menu_4.png'
+import menu_5 from './menu_5.png'
 import menu_7 from './menu_7.png'
 
 
@@ -27,7 +29,6 @@ import parcel_icon from './parcel_icon.png'
 
 import pizza_fungi from './pizza_fungi.png'
 import pizza_kebab from './pizza_kebab.png'
-import pizza_kebab_icon from './pizza_kebab_icon.jpg'
 import pizza_margherita from './pizza_margherita.png'
 import pizza_salami from './pizza_salami.png'
 import pizza_vesuvio from './pizza_vesuvio.png'
@@ -62,19 +63,23 @@ export const assets = {
 export const menu_list = [
      {
         menu_name: "Pizza",
-        menu_image: pizza_kebab_icon
-    },
-    {
-        menu_name: "Salad",
         menu_image: menu_1
     },
     {
-        menu_name: "Rolls",
+        menu_name: "Rollar",
         menu_image: menu_2
     },
     {
-        menu_name: "Sandwich",
+        menu_name: "Sallader",
+        menu_image: menu_3
+    },
+    {
+        menu_name: "Burgare",
         menu_image: menu_4
+    },
+     {
+        menu_name: "Grill",
+        menu_image: menu_5
     },
     {
         menu_name: "Pasta",
