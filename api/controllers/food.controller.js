@@ -4,14 +4,14 @@ import fs from 'fs';
 // add food item
 
 const addFood = async (req, res, next) => {
-    // let image_filename = `${req.file.filename}`
+    let image_filename = `${req.file.filename}`
 
     const food = new foodModel({
         name: req.body.name,
         description: req.body.description,
         price: req.body.price,
         category: req.body.category,
-        // image: image_filename
+        image: image_filename
     })
 
     try {
