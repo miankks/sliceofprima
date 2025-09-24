@@ -4,17 +4,10 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import path from 'path';
-import listingRouter from './routes/listing.route.js'
 import { connectDB } from './config/db.js';
+import foodRouter from './routes/food.route.js';
 
 dotenv.config();
-
-// mongoose.connect(process.env.MONGO).then(() => {
-//     console.log("Connected to MongoDB");
-// }).catch((err) => {
-//     console.log(err, "there is an error connecting");
-    
-// })
 
 // app config
 const app = express();
@@ -27,6 +20,10 @@ app.use(cors());
 
 // DB connect
 connectDB();
+
+// api endpoints
+app.use('/api/food', foodRouter)
+
 app.get("/", (req, res) => {
     res.send("API working")
 })
@@ -36,6 +33,5 @@ app.listen(port, () => {
     
 })
 
-app.use('/api/listing', listingRouter)
 
 // retryWrites=true&w=majority&appName=Cluster0
