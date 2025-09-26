@@ -6,6 +6,8 @@ import cookieParser from 'cookie-parser';
 import path from 'path';
 import { connectDB } from './config/db.js';
 import foodRouter from './routes/food.route.js';
+import userRouter from './routes/user.route.js';
+import 'dotenv/config';
 
 dotenv.config();
 
@@ -24,6 +26,7 @@ connectDB();
 // api endpoints
 app.use('/api/food', foodRouter)
 app.use('/images', express.static('uploads'));
+app.use("/api/user", userRouter)
 
 app.get("/", (req, res) => {
     res.send("API working")
