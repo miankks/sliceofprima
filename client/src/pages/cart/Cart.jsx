@@ -4,7 +4,7 @@ import { StoreContext } from '../../context/StoreContext';
 import './Cart.css';
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
 
   const navigate = useNavigate();
   return (
@@ -25,10 +25,11 @@ const Cart = () => {
             return (
               <div key={index}>
                 <div className="cart-items-title cart-items-item">
-                  <img src={item.image} alt="" />
+                  {/* <img src={item.image} alt="" /> */}
+                  <img src={url+'/images/'+item.image} alt="" />
                   <p>{item.name}</p>
                   <p>{item.price}sek</p>
-                  {/* will show quatity of each product */}
+                  {/* will show quantity of each product */}
                   <p>{cartItems[item._id]}</p>
                   <p>{item.price * cartItems[item._id]}sek</p>
                   <p className='cross' onClick={() => removeFromCart(item._id)}>x</p>
