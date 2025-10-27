@@ -8,8 +8,6 @@ const addToCart = async (req, res) => {
         
         // extract the cartdata
         let cartData = await userData.cartData || {};
-        // let cartData = await userData.cartData;
-        // console.log(req.body);
         
         !cartData[itemId] ? cartData[itemId] = 1 : cartData[itemId] += 1;
       
